@@ -1,0 +1,26 @@
+{
+  "name": "create-react-app-express",
+  "version": "1.0.0",
+  "main": "server.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "client": "cd client && npm start",
+    "server": "node server.js",
+    "dev": "server start"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "helmet": "^3.22.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
